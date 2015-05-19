@@ -1,25 +1,25 @@
-.table {
-  tbody.toggle-shop-member-permissions {
-    cursor: pointer;
+// .toggle-shop-member-permissions {
+//   cursor: pointer;
+// }
+//
+.shop-member-groups {
+
+  ul {
+    white-space: nowrap;
+    position: absolute;
+    z-index: 99;
+    // border: none;
   }
-  tbody.shop-member-permissions {
-    border: 0;
-    tr {
-      td {
-        border: 0;
-      }
-      ul {
-        padding: 0;
-        list-style-type: none;
-        .float(left);
-        .margin-right(30px);
-      }
-      label {
-        font-weight: normal;
-      }
-      .shop-permissions-group {
-        font-weight: bold;
-      }
-    }
+  label {
+    font-weight: normal;
+    text-transform: capitalize;
   }
+  li {
+    border: none !important;
+  }
+}
+
+.shop-member-group {
+  display: inline-block;
+  padding: 10px;
 }

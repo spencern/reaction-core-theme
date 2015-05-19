@@ -4,8 +4,6 @@
 
 //== Typography
 @font-family-sans-serif:  "Open Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
-@font-size-h1:            floor((@font-size-base * 3.6)); // ~36px
-@font-size-h2:            floor((@font-size-base * 2.35)); // ~30px
 @letter-spacing: .8px;
 
 //== Headings
@@ -20,6 +18,9 @@
 @headings-font-family-h3:   @headings-font-family;
 @headings-color-h3:         @headings-color;
 @headings-font-weight-h3:   200;
+
+//== Well
+@well-bg: @body-bg;
 
 //== Navbar
 @navbar-default-bg: #2fa4e7;
@@ -44,8 +45,8 @@
 @product-grid-columns-size: 28em;
 
 //== Product Detail
-@product-title-font-size: @font-size-h1;
-@product-page-title-font-size: @font-size-h2;
+@product-title-font-size: floor((@font-size-base * 3.6)); // ~36px
+@product-page-title-font-size: floor((@font-size-base * 2.35)); // ~30px
 @product-price-font-size: 50px;
 @product-description-font-size: 16px;
 
