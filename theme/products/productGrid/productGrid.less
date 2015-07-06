@@ -6,10 +6,9 @@
   }
 
   .product-grid-list {
-   -moz-column-width: @product-grid-columns-size;
-   -webkit-column-width: @product-grid-columns-size;
-   -moz-column-gap: 1em;
-   -webkit-column-gap: 1em;
+    .display(flex);
+    .flex-wrap(wrap);
+
    .overlay {
     color: @product-overlay-text;
     opacity: 0.7;
@@ -24,11 +23,15 @@
   }
 
   .product-grid-item {
+    .flex(1 1 auto);  
+    max-width: @product-grid-columns-size;
+    min-width: 12em;
+
     position: relative;
-    display: inline-block;
+
     margin:  0.25rem;
     padding:  1rem;
-    width:  100%;
+    
     .badge {
       position: absolute;
       top: 20px;
