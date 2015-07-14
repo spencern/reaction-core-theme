@@ -8,6 +8,7 @@
   .product-grid-list {
     .display(flex);
     .flex-wrap(wrap);
+    .justify-content(space-around);
 
    .overlay {
     color: @product-overlay-text;
@@ -23,19 +24,89 @@
   }
 
   .product-grid-item {
-    .flex(1 1 auto);  
-    max-width: @product-grid-columns-size;
-    min-width: 12em;
-
+    .flex(1 1 auto);
+    width: 20%;
     position: relative;
 
-    margin:  0.25rem;
-    padding:  1rem;
+    max-width: 25%;
+    min-width: 250px;
+    padding: 10px;
+
+    margin-bottom: 60px;
     
+    .product-grid-item-images {
+      max-height: 600px;
+      overflow: hidden;
+    }
+    
+
     .badge {
       position: absolute;
       top: 20px;
       .left(19px);
+    }
+
+    &.product-small {
+      width: 20%;
+      .product-primary-images {
+        width: 100%;
+        height: 400px;
+      }
+
+      .product-additional-images {
+        display: none;
+      }
+    }
+
+    &.product-medium {
+      max-width: 50%;
+      .flex(1 1 50%);
+
+      .product-grid-item-images {
+        height: 400px;
+      }
+      
+
+      .product-primary-images {
+        width: auto;
+        height: 100%;
+      }
+
+    }
+
+    &.product-large {
+      width: 100%;
+      min-width: 100%;
+
+      .product-primary-images {
+        height: 400px;
+      }
+
+      .grid-content {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        padding: 10px 25px;
+      
+
+        background-color: @brand-dark-color;
+        background-color: @brand-secondary-color;
+        color: @brand-light-color;
+      }
+
+      .overlay {
+        color: @white;
+        padding-top: 0;
+      }
+
+      .overlay-title {
+        font-size: @product-grid-large-title-size;
+        text-align: left;
+      }
+    }
+
+    &.product-xlarge {
+      width: 100%;
     }
   }
 
@@ -48,6 +119,32 @@
     -webkit-box-shadow: 0 0 1px 1px @gray-lighter inset;
     -moz-box-shadow: 0 0 1px 1px @gray-lighter inset;
     box-shadow: 0 0 1px 1px @gray-lighter inset;
+
+    .display(flex);
+  }
+
+  .product-primary-images {
+    min-width: 80%;
+    .flex(1 1 auto);
+
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .product-additional-images {
+    width: 20%;
+    .flex(0 0 auto);
+
+    .display(flex);
+    .flex-direction(column);
+
+    border-left: @border-thin;
+    background-color: @white;
+
   }
 
   .overlay-title {
@@ -72,6 +169,9 @@
   }
 
 
+
+}
+
   .product-grid-controls {
     .display(flex);
     .flex(0 1 auto);
@@ -81,22 +181,35 @@
     button {
       border: none;
       background-color: transparent;
-      width: 50px;
-      height: 35px;
+      width: 55px;
+      height: 44px;
+      
+      color: @controlbar-fg;
+      
+      border-right: 1px solid @controlbar-seperator;
 
-      &:hover {
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.5);
+      &:last-child {
+        border: none;
+      }
+
+      // TODO: Make make this more like bootstrap / like a framework
+      &:hover, &.active {
+        color: @controlbar-fg-hover;
+        background-color: @controlbar-hover;
       }
     }
 
+    .more-options-container {
+      position: relative;
+    }
+
     width: auto;
-    margin-top: -54px; // Move it up into the image
+    margin-top: -60px; // Move it up into the image
     padding: 0;
     overflow: hidden;;
 
-    background-color: #fff;
-    border-radius: 22px;
+    background-color: @controlbar-bg;
+
+    border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
   }
-}

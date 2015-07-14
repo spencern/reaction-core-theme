@@ -2,9 +2,69 @@
 //*requires browser-policy to be set in client
 @import url(//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,300,600,800,400);
 
+//== Colors
+
+// Shades of gray
+@white: #fff;
+@black: #000;
+
+@black05: darken(#fff, 5%);
+@black10: darken(#fff, 10%);
+@black15: darken(#fff, 15%);
+@black20: darken(#fff, 20%);
+@black25: darken(#fff, 25%);
+@black30: darken(#fff, 30%);
+@black40: darken(#fff, 40%);
+@black50: darken(#fff, 50%);
+@black60: darken(#fff, 60%);
+@black70: darken(#fff, 70%);
+@black80: darken(#fff, 80%);
+@black90: darken(#fff, 90%);
+
+@whiteAlpha10: rgba(255, 255, 255, 0.1);
+@whiteAlpha20: rgba(255, 255, 255, 0.2);
+@whiteAlpha50: rgba(255, 255, 255, 0.5);
+
+// Brand
+@brand-primary-color: #8c5a9c; // Vivid Violet
+@brand-secondary-color: #4aa5bd; // Pelorous (Teal-ish)
+@brand-light-color: #e3e3e3; // Platinum (Light gray)
+@brand-dark-color: #414141; // Charcoal (Dark gray)
+@brand-vivid-color: #00dcdd; // Bright Turqouise
+@brand-muted-color: #abe2e7; // Powder Blue
+
+
+@body-bg: @black05;
+@border-color: @black10;
+@border-thin: 1px solid @black10;
+
+@shadow-1: 0 0 5px rgba(0, 0, 0, 0.2);
+
+
+// CMS Controls
+// @controlbar-bg: @brand-primary-color;
+// @controlbar-fg: @white;
+// @controlbar-seperator: darken(@brand-primary-color, 10%);
+// @controlbar-hover: lighten(@brand-primary-color, 20%);
+
+@controlbar-bg: @white;
+@controlbar-fg: @black;
+@controlbar-seperator: darken(@controlbar-bg, 10%);
+@controlbar-hover: lighten(@controlbar-fg, 20%);
+@controlbar-fg-hover: @white;
+
+@edit-bg: lighten(@brand-primary-color, 10%);
+@edit-border: @brand-primary-color;
+
+
+
 //== Typography
 @font-family-sans-serif:  "Open Sans", "Roboto", "Helvetica Neue", Helvetica, sans-serif;
 @letter-spacing: .8px;
+
+@product-grid-large-title-size: 2rem; 
+
+
 
 //== Headings
 @headings-font-family-h1:   @headings-font-family;
@@ -20,10 +80,10 @@
 @headings-font-weight-h3:   200;
 
 //== Well
-@well-bg: @body-bg;
+@well-bg: @white;
 
 //== Navbar
-@navbar-default-bg: #2fa4e7;
+@navbar-default-bg: @black70;
 @navbar-default-color: #fff;
 @navbar-default-link-color: #fff;
 @navbar-default-toggle-icon-bar-bg: darken(@navbar-default-bg, 10%);
@@ -32,7 +92,7 @@
 @navbar-brand-font-size: @font-size-large; //required
 @navbar-height: 50px;
 @navbar-padding-vertical: 14px;
-@navbar-inverse-bg: #073b73;
+@navbar-inverse-bg: @black80;
 @navbar-inverse-color: #fff;
 @navbar-inverse-link-color: #fff;
 
@@ -73,3 +133,25 @@
 @dashboard-row-bg: contrast(@dashboard-sidebar-bg,darken(@dashboard-sidebar-bg, 10%),lighten(@dashboard-sidebar-bg, 20%));
 @dashboard-drawer-height: @cart-drawer-height;
 @dashboard-font-color: #000;
+
+
+
+//== Responsive
+
+@highdensity: ~"only screen and (-webkit-min-device-pixel-ratio: 1.5)",
+              ~"only screen and (min--moz-device-pixel-ratio: 1.5)",
+              ~"only screen and (-o-min-device-pixel-ratio: 3/2)",
+              ~"only screen and (min-device-pixel-ratio: 1.5)";
+@mobile:      ~"only screen and (max-width: 649px)";
+@tablet:      ~"only screen and (min-width: 650px) and (max-width: 949px)";
+@mobile-all:   ~"only screen and (max-width: 949px)";
+
+@desktop-all:  ~"only screen and (min-width: 950px)";
+@desktop:     ~"only screen and (min-width: 950px) and (max-width: 1128px)";
+@desktop-xl:  ~"only screen and (min-width: 1129px)";
+// @desktop-sm:
+
+
+@height-sm:  ~"only screen and (max-height: 730px)";
+@height-md:  ~"only screen and (min-height: 731px) and (max-height: 1000px)";
+
