@@ -75,3 +75,12 @@
       .margin-left(-60px);
   }
 }
+
+// patch for payment autoform's mysteriously
+// not getting the form-control class
+.core-payment-method-form input {
+  .form-control;
+}
+.core-payment-method-form select {
+  .form-control;
+}
