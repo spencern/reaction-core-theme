@@ -8,7 +8,9 @@
   .product-grid-list {
     .display(flex);
     .flex-wrap(wrap);
-
+    .flex-direction(row);
+    .justify-content(flex-start);
+    
    .overlay {
     color: @product-overlay-text;
     opacity: 0.7;
@@ -20,22 +22,176 @@
       text-align: center;
       }
     }
+
   }
 
   .product-grid-item {
-    .flex(1 1 auto);  
-    max-width: @product-grid-columns-size;
-    min-width: 12em;
+    
+    width: 25%;
+    max-width: 25%;
+    .flex(1 1 25%);
 
     position: relative;
-
-    margin:  0.25rem;
-    padding:  1rem;
+    padding: 10px;
+    margin-bottom: 60px;
     
+
+    .product-primary-images {
+      width: 100%;
+      height: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .product-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: cover; 
+      background-position: center center;
+
+      img {
+        display: none;
+      }
+
+      @media print {
+        img {
+          display: block;
+        }
+      }
+    }
+
+    .product-grid-item-images {
+      width: 100%;
+      height: 325px;
+
+      overflow: hidden;
+    }
+    
+    @media @mobile {
+      .flex-basis(50%);
+      width: 50%;
+      max-width: 100%;
+      padding: 5px;
+    }
+
     .badge {
       position: absolute;
       top: 20px;
       .left(19px);
+    }
+
+    @media @tablet {
+      .product-grid-item-images {
+        height: 225px;
+      }
+    }
+    
+
+    // ----------------------------------------
+    // Small product: default
+    &.product-small {
+      
+      max-width: 25%;
+      
+      @media @mobile {
+        max-width: 100%;
+
+        .product-grid-item-images {
+          height: 225px;
+        }
+      }
+    }
+  
+
+
+    // ----------------------------------------
+    // Medium product, with additional preview images
+    &.product-medium {
+      // width: 50%;
+      max-width: 50%;
+      .flex-basis(50%);
+
+      .product-grid-item-images {
+        height: 325px;
+      }
+      
+
+      .product-primary-images {
+        width: auto;
+        height: 100%;
+      }
+      
+      @media @mobile {
+        width: 100%;
+        max-width: 100%;
+
+        .flex-basis(100%);
+
+        .product-grid-item-images {
+          height: 200px;
+        }
+      }
+
+      @media @tablet {
+        .product-grid-item-images {
+          height: 225px;
+        }
+      }
+    }
+
+    // ----------------------------------------
+    // Large hero-like product
+    &.product-large {
+      min-width: 100%;
+      .flex-basis(100%);
+      
+      .product-grid-item-images {
+        height: 400px;
+      }
+
+      .grid-content {
+        position: absolute;
+        left: 20px;
+        bottom: 20px;
+        padding: 10px 25px;
+
+        background-color: @brand-dark-color;
+        background-color: @brand-secondary-color;
+        color: @brand-light-color;
+      }
+
+      .overlay {
+        color: @white;
+        padding-top: 0;
+      }
+
+      .overlay-title {
+        font-size: @product-grid-large-title-size;
+        text-align: left;
+      }
+      
+      // -- Responsive
+      @media @mobile {
+        width: 100%;
+        max-width: 100%;
+
+        .flex-basis(100%);
+
+        .product-grid-item-images {
+          height: 225px;
+        }
+
+        .grid-content {
+          position: static;
+        }
+
+        .overlay-title {
+          text-align: center;
+        }
+      }
     }
   }
 
@@ -48,6 +204,55 @@
     -webkit-box-shadow: 0 0 1px 1px @gray-lighter inset;
     -moz-box-shadow: 0 0 1px 1px @gray-lighter inset;
     box-shadow: 0 0 1px 1px @gray-lighter inset;
+
+    .display(flex);
+  }
+
+  .product-primary-images {
+    min-width: 80%;
+    .flex(1 1 auto);
+
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .product-additional-images {
+    .display(flex);
+    .flex(0 0 auto);
+    .flex-direction(column);
+
+    width: 20%;
+
+    border-left: @border-thin;
+    background-color: @white;
+
+    .product-image {
+      .flex(1 1 auto);
+      border-bottom: @border-thin;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    img {
+      .flex(1 1 auto);
+      display: block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+
+      border-bottom: @border-thin;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
   }
 
   .overlay-title {
@@ -72,6 +277,9 @@
   }
 
 
+
+}
+
   .product-grid-controls {
     .display(flex);
     .flex(0 1 auto);
@@ -81,22 +289,35 @@
     button {
       border: none;
       background-color: transparent;
-      width: 50px;
-      height: 35px;
+      width: 55px;
+      height: 44px;
+      
+      color: @controlbar-fg;
+      
+      border-right: 1px solid @controlbar-seperator;
 
-      &:hover {
-        color: #fff;
-        background-color: rgba(0, 0, 0, 0.5);
+      &:last-child {
+        border: none;
+      }
+
+      // TODO: Make make this more like bootstrap / like a framework
+      &:hover, &.active {
+        color: @controlbar-fg-hover;
+        background-color: @controlbar-hover;
       }
     }
 
+    .more-options-container {
+      position: relative;
+    }
+
     width: auto;
-    margin-top: -54px; // Move it up into the image
+    margin-top: -60px; // Move it up into the image
     padding: 0;
     overflow: hidden;;
 
-    background-color: #fff;
-    border-radius: 22px;
+    background-color: @controlbar-bg;
+
+    border-radius: 5px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.2);
   }
-}
