@@ -1,7 +1,7 @@
 Package.describe({
   name: "reactioncommerce:core-theme",
   summary: "Reaction Commerce core theme",
-  version: "1.4.1",
+  version: "1.5.0",
   git: "https://github.com/reactioncommerce/core-theme.git"
 });
 
