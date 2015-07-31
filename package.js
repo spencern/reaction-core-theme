@@ -18,6 +18,7 @@ Package.onUse(function(api) {
     'default/mixins.less',
     'default/popovers.less',
     'default/variables.less',
+    'default/panels.less',
     'theme/accounts/accounts.less',
     'theme/accounts/inline/inline.less',
     'theme/cart/cartDrawer/cartDrawer.less',

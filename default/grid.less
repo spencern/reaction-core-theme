@@ -1,3 +1,41 @@
 // ** Implementation of a flexbox-based grid system will go here
 // ** This grid system will be a drop in replacement for bootstrap's default
 // ** float based grid system. This file is a stub for a future update.
+
+
+
+.flex {
+    .display(flex);
+    .flex-wrap(wrap);
+}
+
+// 
+// -- Desktop - 2 per row
+// -- Tablet - 2 per row
+// -- Phone - Single column, full width per item
+.flex--2x {
+    .flex-item {
+        width: 50%;
+        max-width: 50%;
+    }
+}
+
+// 
+// -- Desktop - 4 per row
+// -- Tablet - 3 per row
+// -- Phone - Single column, full width per item
+.flex-item {
+    .display(flex);
+    .flex-direction(column);
+    width: 25%;
+    max-width: 25%;
+    padding: 10px;
+
+    @media @tablet {
+        width: 33%;
+    }
+
+    @media @mobile {
+        width: 100%;
+    }
+}
