@@ -20,6 +20,7 @@
 
 .panel {
     .display(flex);
+    .flex(1 1 auto);
     .flex-direction(column);
     background-color: @white;
     border: none;
@@ -29,6 +30,13 @@
 
 .panel-header {
     padding: 10px 20px;
+}
+
+.panel-header--brand {
+    padding: 10px 20px;
+    background-color: darken(@brand-primary-color, 10%);
+
+    color: #fff;
 }
 
 .panel-content {
@@ -49,5 +57,14 @@
 
     .right {
         .justify-content(flex-end);
+    }
+}
+
+
+//
+
+.panel--profile {
+    .profile-image {
+        
     }
 }
