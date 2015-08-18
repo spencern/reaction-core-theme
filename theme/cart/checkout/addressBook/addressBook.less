@@ -1,4 +1,11 @@
-.address-book {
+.panel--address-book {
+
+  > .address-book {
+    .panel-heading {
+      .panel-default > .panel-heading;
+    }
+  }
+
   .list-group-item {
     cursor: pointer;
     font-size: @font-size-small;
