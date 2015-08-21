@@ -25,11 +25,26 @@
     background-color: @white;
     border: none;
     border-radius: 0;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
 }
 
-.panel-header {
+.panel-heading {
+    padding: 15px 20px;
+}
+
+.panel-control-bar {
+    .display(flex);
+    .justify-content(space-between);
+
     padding: 10px 20px;
+
+    border-bottom: 1px solid @black10;
+}
+
+.panel-control-bar .panel-title {}
+.panel-control-bar .panel-controls {
+    .display(flex);
+    .justify-content(center);
 }
 
 .panel-header--brand {

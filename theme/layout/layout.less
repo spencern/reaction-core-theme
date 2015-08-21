@@ -1,0 +1,41 @@
+
+body.admin {
+  .display(flex);
+  overflow: hidden;
+  // background-color: darken(@brand-primary-color, 40%);
+}
+
+.page {
+  .flex(1 1 auto);
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  transform: scale(.9);
+  box-shadow: 0 0 40px rgba(0,0,0,.15);
+}
+
+.tools {
+
+  .flex(1 1 auto);
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  // FOR NOW
+  padding: 20px;
+
+  // position: fixed;
+  top: 0;
+  right: 0;
+  min-width: 400px;
+  max-width: 400px;
+  height: 100vh;
+  // background-color: @white;
+  z-index: 1000;
+  // box-shadow: 0 0 20px rgba(0,0,0,.2);
+}
+
+.section .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
