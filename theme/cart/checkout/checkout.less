@@ -1,8 +1,8 @@
 
 .checkout {
-  .container;
   .flex();
-  
+
+
 }
 
 .checkout-progress {
@@ -13,6 +13,12 @@
   .display(flex);
   .justify-content(space-between);
   width: 100%;
+
+
+  @media screen and (max-width: @screen-xs-max) {
+    .flex-direction(column);
+  }
+
 }
 
 .checkout-steps .panel-default > .panel-heading,
@@ -25,13 +31,23 @@
 
 .checkout-steps-main {
   .flex(1 1 auto);
-  max-width: 68%;
+  max-width: 100%;
+  .margin-right(3rem);
+
+  @media screen and (max-width: @screen-xs-max) {
+    .margin-right(0);
+  }
 }
 
 .checkout-steps-side {
   .flex(1 0 auto);
   min-width: 300px;
   max-width: 30%;
+
+  @media screen and (max-width: @screen-xs-max) {
+    min-width: 100%;
+    max-width: 100%;
+  }
 }
 
 
@@ -60,9 +76,29 @@
   }
 }
 
+.checkout-step-pending {
+  position: relative;
+  
+  > .panel-default{
+    height: 300px;
+    margin-bottom: 3rem;
+    background-color: @black05;
+  }
+
+  
+
+  > .panel-default .panel-heading, .panel-body {
+    background-color: @black05;
+    border: none;
+  }
+}
 
 .checkout-step {
   position: relative;
+  
+  > .panel-default {
+    margin-bottom: 3rem;
+  }
 }
 
 .checkout-step-badge {
@@ -76,19 +112,21 @@
   .margin-right(20px);
 
   border-radius: 19px;
-  background: @cart-progress-active;
+  background: @checkout-progress-next;
 
-  color: #fff;
+  color: @checkout-progress-next-text;
   font-size: 16px;
   font-weight: bold;
 }
 
 .checkout-step-badge.completed {
-   background: @checkout-progress-visited;
+  background: @checkout-progress-visited;
+  color: @checkout-progress-visited-text;
 }
 
 .checkout-step-badge.active {
-   background: @checkout-progress-active;
+  background: @checkout-progress-active;
+  color: @checkout-progress-active-text;
 }
 
 
