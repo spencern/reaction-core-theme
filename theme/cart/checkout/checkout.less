@@ -66,38 +66,20 @@
 }
 
 .checkout-step-badge {
-
   .display(flex);
   .justify-content(center);
   .align-items(center);
-
-  background: @cart-progress-active;
-  font-size: 16px;
-
-  // position: absolute;
-  // top: -10px;
-  // .left(-10px);
+  .flex(0 0 auto);
 
   width: 38px;
   height: 38px;
-
-
-  border-radius: 19px;
-
   .margin-right(20px);
 
-
+  border-radius: 19px;
+  background: @cart-progress-active;
 
   color: #fff;
-  // line-height: 16px;
-  // padding-top: 13px;
-  // padding-bottom: 13px;
-  // .padding-left(12px);
-  // .padding-right(11px);
-  text-align: center;
-  text-shadow: 1px 1px rgba(0, 0, 0, 0.2);
-  margin: 0 0 2px 0;
-  // .margin-left(-30px);
+  font-size: 16px;
   font-weight: bold;
 }
 
@@ -105,30 +87,10 @@
    background: @checkout-progress-visited;
 }
 
-.checkout-pending {
-  display: block;
-  margin-bottom: 10px;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  background-color:  contrast(@body-bg,darken(@body-bg, 10%),lighten(@body-bg, 20%));
-  width: 100%;
-  height: 250px;
-
-  background-image: -moz-linear-gradient(-45deg, rgba(255, 255, 255, .4) 25%, transparent 25%,transparent 50%, rgba(255, 255, 255, .4) 50%, rgba(255, 255, 255, .4) 75%,transparent 75%, transparent);
-
-  .checkout-step-badge {
-    background-color: @cart-progress-next;
-  }
+.checkout-step-badge.active {
+   background: @checkout-progress-active;
 }
 
-.payment-submit{
-  .checkout-step-badge {
-     background-color: #ddd;
-      position: absolute;
-      top:inherit;
-      .margin-left(-60px);
-  }
-}
 
 // patch for payment autoform's mysteriously
 // not getting the form-control class
