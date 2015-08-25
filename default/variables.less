@@ -37,7 +37,7 @@
 @brand-primary: @brand-primary-color;
 
 
-@body-bg: @black05;
+@body-bg: darken(white, 2%);
 @border-color: @black10;
 @border-thin: 1px solid @black10;
 
@@ -86,18 +86,30 @@
 @well-bg: @white;
 
 //== Navbar
-@navbar-default-bg: @black70;
-@navbar-default-color: #fff;
-@navbar-default-link-color: #fff;
+@navbar-default-bg: @black60;
+@navbar-default-color: @white;
+@navbar-default-link-color: @black05;
 @navbar-default-toggle-icon-bar-bg: darken(@navbar-default-bg, 10%);
 @navbar-default-toggle-hover-bg: darken(@navbar-default-bg, 10%);
 @navbar-margin-bottom: 0;
 @navbar-brand-font-size: @font-size-large; //required
 @navbar-height: 50px;
 @navbar-padding-vertical: 14px;
-@navbar-inverse-bg: @black80;
-@navbar-inverse-color: #fff;
-@navbar-inverse-link-color: #fff;
+@navbar-inverse-bg: @white;
+@navbar-inverse-color: @black;
+@navbar-inverse-link-color: @black;
+
+
+//== Tag navbar
+@navbar-secondary-bg: @white;
+@navbar-secondary-color: @black;
+@navbar-secondary-border: 1px solid @black10;
+
+//== Footer
+@footer-default-bg: @white;
+@footer-default-color: @black70;
+@footer-default-color-hover: @black60;
+@footer-default-border: @navbar-secondary-border;
 
 
 //== Product Grid
@@ -115,13 +127,13 @@
 
 
 //== Cart Drawer
-@cart-drawer-bg: @gray-dark;
+@cart-drawer-bg: @white;
 @cart-drawer-height: 275px;
-@cart-icon-bg: @body-bg;
+@cart-icon-bg: #25B315;
 @cart-icon-badge:  #25B315;
 @cart-icon-badge-warning: #FF0000;
-@cart-icon-text: @text-color;
-@cart-icon-color: @text-color;
+@cart-icon-text: @white;
+@cart-icon-color: @white;
 @cart-icon-border-radius: 0;
 @cart-icon-border: none;
 @cart-icon-padding:  (@navbar-padding-vertical - 4px) 30px (@navbar-padding-vertical - 4px) 24px;

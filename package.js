@@ -19,6 +19,7 @@ Package.onUse(function(api) {
     'default/popovers.less',
     'default/variables.less',
     'default/panels.less',
+    'default/dropdowns.less',
     'theme/accounts/accounts.less',
     'theme/accounts/inline/inline.less',
     'theme/cart/cartDrawer/cartDrawer.less',
