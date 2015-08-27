@@ -21,6 +21,7 @@ Package.onUse(function(api) {
     'default/variables.less',
     'default/panels.less',
     'default/dropdowns.less',
+    'default/alerts.less',
     'theme/accounts/accounts.less',
     'theme/accounts/inline/inline.less',
     'theme/cart/cartDrawer/cartDrawer.less',
