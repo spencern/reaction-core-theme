@@ -1,3 +1,32 @@
 .dashboard-state-active {
    color: @brand-success;
 }
+
+
+.admin-controls {
+  .display(flex);
+  .flex-direction(column);
+  .flex(1 1 auto);
+  min-width: 500px;
+  max-width: 500px;
+  height: 100%;
+  background-color: @white;
+  border-left: 1px solid @black10;
+}
+
+.admin-controls-heading {
+  .flex(0 0 auto);
+  height: 88px;
+}
+
+.admin-controls-content {
+  .flex(1 1 auto);
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.admin-controls .panel-default {
+  border-right: 0;
+  border-left: 0;
+}

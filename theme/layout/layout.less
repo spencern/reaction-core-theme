@@ -1,7 +1,11 @@
 
+html {
+  // height: 100%;
+}
 body.admin {
   .display(flex);
   overflow: hidden;
+  height: 100vh;
   // background-color: darken(@brand-primary-color, 40%);
 }
 
@@ -35,9 +39,25 @@ body.admin {
   // box-shadow: 0 0 20px rgba(0,0,0,.2);
 }
 
-.section .container, .section {
+.container-fluid-sm {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.container-lg {
   padding-top: 60px;
   padding-bottom: 60px;
+
+  @media screen and (max-width: @screen-xs-max) {
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.container-sm {
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   @media screen and (max-width: @screen-xs-max) {
     width: 100%;
