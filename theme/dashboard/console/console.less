@@ -2,16 +2,46 @@
    color: @brand-success;
 }
 
+.admin-controls-wrap {
+
+}
 
 .admin-controls {
+  // position: fixed;
+  // top: 0;
+  // right: 0;
   .display(flex);
   .flex-direction(column);
   .flex(1 1 auto);
-  min-width: 500px;
-  max-width: 500px;
+  // min-width: 500px;
+  max-width: 400px;
   height: 100%;
   background-color: @white;
   border-left: 1px solid @black10;
+
+  // .lh-transition(all 200ms);
+  // opacity: 0;
+  // width: 0;
+  // .lh-transform(translateX(100vw));
+  
+  @media screen and (max-width: @screen-lg-min) {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: @zindex-navbar;
+  }
+}
+
+.admin-controls.show {
+  // opacity: 1;
+  // width: auto;
+  // .lh-transform(translateX(0));
+
+  @media screen and (max-width: @screen-lg-min) {
+    .display(flex);
+    position: static;
+  }
 }
 
 .admin-controls-heading {
@@ -21,9 +51,12 @@
 
 .admin-controls-content {
   .flex(1 1 auto);
+  min-width: 400px;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  // .lh-transition(all 5000ms);
+
 }
 
 .admin-controls .panel-default {

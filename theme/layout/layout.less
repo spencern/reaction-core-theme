@@ -10,13 +10,22 @@ body.admin {
 }
 
 .page {
+
   .flex(1 1 auto);
+  min-width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
 
-  transform: scale(.9);
+  // transform: scale(.9);
+  // .lh-transition(all 200ms);
   box-shadow: 0 0 40px rgba(0,0,0,.15);
+}
+
+.page.show {
+  min-width: 0;
+  width: 65vw;
+  .lh-transform(scale(.9));
 }
 
 body.admin-horizontal-reverse {
