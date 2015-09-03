@@ -47,6 +47,7 @@
 .admin-controls-heading {
   .flex(0 0 auto);
   height: 88px;
+  border-bottom: @border-thin;
 }
 
 .admin-controls-content {
@@ -56,13 +57,21 @@
   overflow-x: hidden;
   overflow-y: auto;
   // .lh-transition(all 5000ms);
-
 }
 
-.admin-controls .panel-default {
-  border-right: 0;
-  border-left: 0;
+
+.admin-controls-content .panel-default > .panel-heading {
+  background-color: darken(@white, 2%);
 }
+
+.admin-controls-content .admin-controls-container {
+  padding: 20px;
+}
+
+// .admin-controls .panel-default {
+//   border-right: 0;
+//   border-left: 0;
+// }
 
 
 body.admin-vertical .admin-controls {
