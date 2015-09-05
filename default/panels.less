@@ -28,6 +28,18 @@
   box-shadow: 0 0 0 1px rgba(0,0,0,0.08);
 }
 
+.panel-heading-flex {
+  .display(flex);
+}
+
+.panel-heading-flex > .panel-title {
+  .flex(1 1 auto);
+}
+
+.panel-heading-flex > .panel-controls {
+  .flex(0 0 auto);
+}
+
 .panel-default > .panel-heading {
   padding: 15px 20px;
   background-color: @white;
@@ -113,4 +125,26 @@
   &:last-child {
     padding-right: 0;
   }
+}
+
+
+
+.panel-group {
+  margin-bottom: 20px;
+}
+.panel-group .panel {
+  margin-bottom: 0;
+  border-radius: 0;
+}
+.panel-group .panel + .panel {
+
+  border-top: @border-thin;
+
+  margin-top: 0;
+  border-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.panel-group .panel-heading {
+  border-bottom: 0;
 }

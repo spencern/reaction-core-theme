@@ -22,6 +22,7 @@ Package.onUse(function(api) {
     'default/panels.less',
     'default/dropdowns.less',
     'default/alerts.less',
+    'default/forms.less',
     'default/mixins/lesshat.less',
     'theme/accounts/accounts.less',
     'theme/accounts/inline/inline.less',
