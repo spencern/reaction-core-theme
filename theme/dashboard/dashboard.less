@@ -27,6 +27,26 @@
   }
 }
 
+.btn-dashboard-home {
+  .display(flex);
+  .align-items(center);
+
+  height: 100%;
+  .margin-right(20px);
+  padding: 0 20px;
+
+  border-radius: 0;
+  
+  i {
+    .margin-right(10px);
+    font-size: 2rem;
+  }
+}
+
+.dashboard-nav {
+  padding: 20px;
+}
+
 /* ===============================================================
 Dashboard Swiper Styles
 ================================================================*/
@@ -154,4 +174,73 @@ Dashboard Swiper Pagination Styles
 
 .dashboard-packages {
   padding-top: 20px;
+}
+
+
+
+
+
+.nav-dashboard {
+  .container-fluid-sm();
+
+  .display(flex);
+  .align-items(center);
+
+  // background-color: @white;
+  height: 80px;
+}
+
+.nav-dashboard-heading {
+  margin: 0 30px 0 0;
+}
+
+.nav-dashboard-title {
+  margin: 0;
+}
+
+.nav-dashboard-controls {
+  .display(flex);
+  .flex(1 1 auto);
+  .align-items(center);
+  .justify-content(flex-end);
+  height: 100%;
+
+  > button, > .btn {
+    .margin-left(10px);
+  }
+
+  ul, 
+  ul > li, 
+  ul > li > a {
+    height: 100%;
+    .display(flex);
+    .align-items(center);
+  }
+}
+
+.nav-dashboard-controls .nav-pills {
+
+  > li > a {
+    padding: 0 3rem;
+    color: @text-color;
+    font-size: 1.6rem;
+    border-bottom: 3px solid transparent;
+    border-radius: 0;
+  }
+  
+
+  > li > a:hover,
+  > li > a:focus {
+    background-color: transparent;
+    border-bottom: 3px solid @brand-accent-color;
+  }
+
+  > li.active > a, 
+  > li.active > a:hover,
+  > li.active > a:focus {
+    background-color: transparent;
+    border-bottom: 3px solid @brand-accent-color;
+    border-radius: 0;
+    color: @text-color;
+  }
 }

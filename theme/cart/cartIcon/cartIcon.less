@@ -7,10 +7,17 @@
   position: relative;
   background-color: @cart-icon-bg;
   height: @navbar-height;
+  
   a i {
     color: @cart-icon-color;
     background-color: transparent;
   }
+
+  &:hover {
+    background-color: lighten(@cart-icon-bg, 2%);
+  }
+
+
   .badge {
     position: absolute;
     bottom: 4px;
@@ -23,7 +30,7 @@
     font-weight:bold;
     font-size:inherit;
     padding:2px 8px 2px 8px;
-    background-color:@cart-icon-badge-warning;
+    background-color: @cart-icon-badge-warning;
   }
 }
 .cart-alert{
@@ -54,7 +61,7 @@
 
 .navbar-cart:hover{
   cursor: pointer;
-  background-color: @body-bg;
+  // background-color: @body-bg;
   text-decoration: none;
   margin: 0px;
   padding: 0px;

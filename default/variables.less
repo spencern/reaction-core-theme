@@ -8,6 +8,7 @@
 @white: #fff;
 @black: #000;
 
+@black02: darken(#fff, 2%);
 @black05: darken(#fff, 5%);
 @black10: darken(#fff, 10%);
 @black15: darken(#fff, 15%);
@@ -33,11 +34,14 @@
 @brand-vivid-color: #00dcdd; // Bright Turqouise
 @brand-muted-color: #abe2e7; // Powder Blue
 
+@brand-accent-color: @brand-vivid-color;
+
 // Bootstrap brand primary
-@brand-primary: @brand-primary-color;
+@brand-primary: @black60;
+@brand-light-highlight: @black02;
 
 
-@body-bg: @black05;
+@body-bg: darken(white, 2%);
 @border-color: @black10;
 @border-thin: 1px solid @black10;
 
@@ -86,18 +90,31 @@
 @well-bg: @white;
 
 //== Navbar
-@navbar-default-bg: @black70;
-@navbar-default-color: #fff;
-@navbar-default-link-color: #fff;
+@navbar-default-bg: @black60;
+@navbar-default-color: @white;
+@navbar-default-link-color: @black05;
 @navbar-default-toggle-icon-bar-bg: darken(@navbar-default-bg, 10%);
 @navbar-default-toggle-hover-bg: darken(@navbar-default-bg, 10%);
 @navbar-margin-bottom: 0;
 @navbar-brand-font-size: @font-size-large; //required
 @navbar-height: 50px;
 @navbar-padding-vertical: 14px;
-@navbar-inverse-bg: @black80;
-@navbar-inverse-color: #fff;
-@navbar-inverse-link-color: #fff;
+@navbar-inverse-bg: @white;
+@navbar-inverse-color: @black;
+@navbar-inverse-link-color: @black;
+@navbar-inverse-link-hover-color: @black60;
+
+
+//== Tag navbar
+@navbar-secondary-bg: @white;
+@navbar-secondary-color: @black;
+@navbar-secondary-border: 1px solid @black10;
+
+//== Footer
+@footer-default-bg: @white;
+@footer-default-color: @black70;
+@footer-default-color-hover: @black60;
+@footer-default-border: @navbar-secondary-border;
 
 
 //== Product Grid
@@ -115,20 +132,28 @@
 
 
 //== Cart Drawer
-@cart-drawer-bg: @gray-dark;
+@cart-drawer-bg: @white;
 @cart-drawer-height: 275px;
-@cart-icon-bg: @body-bg;
+@cart-icon-bg: #25B315;
 @cart-icon-badge:  #25B315;
 @cart-icon-badge-warning: #FF0000;
-@cart-icon-text: @text-color;
-@cart-icon-color: @text-color;
+@cart-icon-text: @white;
+@cart-icon-color: @white;
 @cart-icon-border-radius: 0;
 @cart-icon-border: none;
 @cart-icon-padding:  (@navbar-padding-vertical - 4px) 30px (@navbar-padding-vertical - 4px) 24px;
 
 @cart-progress-active: #57aed1;
-@cart-progress-visited:  #8bc53f;
+@cart-progress-visited: @brand-vivid-color; //#8bc53f;
 @cart-progress-next:  #EcEcEc;
+
+@checkout-progress-visited: @brand-vivid-color;
+@checkout-progress-visited-text: @white;
+@checkout-progress-active: @brand-vivid-color;
+@checkout-progress-active-text: @white;
+@checkout-progress-next: @brand-light-color;
+@checkout-progress-next-text: @brand-dark-color;
+
 
 //== Dashboard
 @dashboard-widget-bg: contrast(@body-bg,darken(@body-bg, 10%),lighten(@body-bg, 20%));
@@ -137,7 +162,9 @@
 @dashboard-drawer-height: @cart-drawer-height;
 @dashboard-font-color: #000;
 
-
+//== Accounts
+@accounts-dialog-width: 300px;
+@accounts-dialog-link-color: @black80;
 
 //== Responsive
 
