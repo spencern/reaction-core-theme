@@ -16,7 +16,7 @@
     text-transform: capitalize;
   }
   li {
-    border: none !important;
+    // border: none !important;
   } 
 
   .permission-toggle {
@@ -34,6 +34,26 @@
   padding: 10px;
 }
 
+.member-list-item {
+  .display(flex);
+  border-bottom: @border-thin;
+  > div {
+    padding: 20px;
+  }
+}
+
+.member-list-item-image {
+  .flex(0 0 auto);
+}
+
+.member-list-item-profile {
+  .flex(1 1 auto);
+}
+
+.member-list-item-controls {
+  .flex(0 0 auto);
+}
+
 
 .shop-member-row {
   margin-bottom: 20px;
@@ -49,47 +69,9 @@
 
 }
 
-.shop-member-permissions {
-
-  white-space: nowrap;
-  position: absolute;
-  z-index: 99;
-
-  background-color: white;
-  box-shadow: 0 3px 16px rgba(0,0,0,.2);
-
-  .permission-header {
-    .display(flex);
-    .align-items(center);
-
-    padding: 20px;
-    
-    background-color: @black05;
-    
-    label {
-      .padding-right(20px);
-      .flex(1 1 auto);
-    }
-
-    .button-permissions-close {
-      .flex(0 0 auto);
-    }
-
-  }
-
-  ul {
-    padding: 20px;
-    .display(flex);
-    .flex-wrap(wrap);
-
-    max-height: 400px;
-    min-height: 100px;
-    overflow: auto;
-
-    li {
-      .flex(1 1 auto);
-      width: 33%;
-      max-width: 33%;
-    }
+.shop-member-permission {
+  label {
+    .padding-left(20px);
+    // .flex(1 1 auto);
   }
 }
